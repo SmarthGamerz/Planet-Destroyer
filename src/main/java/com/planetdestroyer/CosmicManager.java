@@ -90,11 +90,11 @@ public class CosmicManager {
 		Box box = new Box(c, c).expand(r);
 		ServerPlayerEntity owner = (ServerPlayerEntity) w.getPlayerByUuid(s.owner);
 		for (LivingEntity e : w.getEntitiesByClass(LivingEntity.class, box, e -> e.isAlive())) {
-			double d = e.getPos().distanceTo(c);
+			double d = e.getEntityPos().distanceTo(c);
 			if (d > r) continue;
 			float dmg = (float) (damage * (1.0 - d / r * 0.6));
 			e.damage(w, w.getDamageSources().explosion(owner, owner), dmg);
-			Vec3d push = e.getPos().subtract(c).normalize().multiply(big ? 2.5 : 1.0).add(0, 0.6, 0);
+			Vec3d push = e.getEntityPos().subtract(c).normalize().multiply(big ? 2.5 : 1.0).add(0, 0.6, 0);
 			e.addVelocity(push); e.velocityModified = true;
 		}
 		w.playSound(null, s.target, big ? SoundEvents.ENTITY_GENERIC_EXPLODE.value() : SoundEvents.ENTITY_GENERIC_EXPLODE.value(),
