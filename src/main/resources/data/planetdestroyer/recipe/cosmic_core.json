@@ -1,0 +1,4 @@
+{ "type":"minecraft:crafting_shaped","category":"misc",
+  "pattern":["ESE","NCN","EDE"],
+  "key":{"E":"minecraft:echo_shard","S":"minecraft:nether_star","N":"minecraft:netherite_ingot","C":"minecraft:end_crystal","D":"minecraft:amethyst_block"},
+  "result":{"id":"planetdestroyer:cosmic_core","count":1} }

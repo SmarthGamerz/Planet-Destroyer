@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1, "id": "planetdestroyer", "version": "1.0.0",
+  "name": "Planet Destroyer", "description": "A legendary cosmic bow that summons planets.",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.planetdestroyer.PlanetDestroyerMod"],
+    "client": ["com.planetdestroyer.client.PlanetDestroyerClient"]
+  },
+  "depends": { "fabricloader": ">=0.17.0", "minecraft": "~1.21.11", "java": ">=21", "fabric-api": "*" }
+}
